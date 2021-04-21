@@ -27,7 +27,9 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript scaffolding repository.
- - include jwt login
+ 
+ Include:
+ - jwt login
  - user crud 
  - bussines logic layer implemeted in service
  - mongoose 
