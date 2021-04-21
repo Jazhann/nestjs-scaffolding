@@ -31,7 +31,7 @@
  Include:
  - jwt login
  - user crud 
- - bussines logic layer implemeted in service
+ - bussines logic layer
  - mongoose 
 
 ## Pre Requisites
