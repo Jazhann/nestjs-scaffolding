@@ -12,7 +12,7 @@ export class UserService {
          @InjectModel('User') private readonly userModel: Model<User>,
     ) {}
 
-    async findEmailUser(email: string): Promise<User> {
+    async findUserEmail(email: string): Promise<User> {
         return this.userModel.findOne({email}).exec();
     }
 
@@ -30,7 +30,7 @@ export class UserService {
     }
 
     async getUsers(): Promise<User[]> {
-        return this.userModel.find().exec(); 
+        return this.userModel.find().exec();
     }
 
     async updateUser(id, user: UserDTO): Promise<any> {
