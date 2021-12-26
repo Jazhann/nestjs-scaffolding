@@ -5,11 +5,11 @@ import { JwtStrategy } from './jwt.strategy';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { jwtConstants } from './constants';
-import { UserServiceModule } from 'src/user/services/userService.module';
+import { DAOModule } from 'src/DAOs/DAO.module';
 
 @Module({
   imports: [
-    UserServiceModule,
+    DAOModule,
     PassportModule,
     JwtModule.register({
       secret: jwtConstants.secret,

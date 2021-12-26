@@ -10,7 +10,7 @@ export const UserSchema = new mongoose.Schema({
   birthDate: Date,
   registrationDate: Date,
   permissions: {
-    admin: Boolean
+    admin: Boolean,
   },
-  isActive: Boolean
+  isActive: Boolean,
 });
