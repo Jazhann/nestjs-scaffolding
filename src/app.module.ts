@@ -16,6 +16,7 @@ import { AuthModule } from './auth/auth.module';
     MongooseModule.forRootAsync({
       useFactory: () => ({
         // Place your mongodb uri
+        uri: 'mongodb+srv://weedadmin:pantalonesdecolores@cluster0.e08ym.mongodb.net/weed?retryWrites=true&w=majority',
       }),
     }),
   ],

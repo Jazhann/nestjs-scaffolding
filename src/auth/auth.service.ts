@@ -8,7 +8,7 @@ import * as _ from 'lodash';
 @Injectable()
 export class AuthService {
     constructor(
-        @Inject('UserDAO') private readonly usersDAO : UserDAO,
+        @Inject('UserDAO') private readonly usersDAO: UserDAO,
         @Inject('JwtService') private readonly jwtService: JwtService,
     ) { }
 
