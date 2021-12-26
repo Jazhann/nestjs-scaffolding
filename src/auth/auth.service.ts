@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { UserService } from 'src/user/services/user.service';
+import { UserDAO } from 'src/DAOs/user.DAO';
 
 import * as bcrypt from 'bcrypt';
 import * as _ from 'lodash';
@@ -8,12 +8,12 @@ import * as _ from 'lodash';
 @Injectable()
 export class AuthService {
     constructor(
-        @Inject('UserService') private readonly usersService: UserService,
+        @Inject('UserDAO') private readonly usersDAO : UserDAO,
         @Inject('JwtService') private readonly jwtService: JwtService,
     ) { }
 
     async validateUser(email: string, pass: string): Promise<any> {
-        const user = await this.usersService.findUserEmail(email);
+        const user = await this.usersDAO.findUserEmail(email);
         if (user) {
             const check = await bcrypt.compare(pass, user.password);
             const userData = {

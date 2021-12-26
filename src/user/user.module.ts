@@ -2,14 +2,14 @@ import { Module } from '@nestjs/common';
 
 import { UserController } from 'src/user/user.controller';
 
-import { UserDAO } from 'src/user/user.DAO';
-import { UserServiceModule } from './services/userService.module';
+import { UserService } from 'src/user/user.service';
+import { DAOModule } from '../DAOs/DAO.module';
 
 @Module({
     imports: [
-        UserServiceModule,
+        DAOModule,
     ],
     controllers: [UserController],
-    providers: [UserDAO],
+    providers: [UserService],
 })
 export class UserModule {}
